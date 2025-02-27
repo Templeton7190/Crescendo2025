@@ -1,7 +1,7 @@
 import commands2 as c2
 import wpilib
 
-from constants import AlgaeConstants
+from constants import BRUSHLESS, AlgaeConstants
 
 
 class Algae(c2.Subsystem):

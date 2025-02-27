@@ -8,7 +8,7 @@ class Elevator(c2.Subsystem):
     def __init__(self) -> None:
         super().__init__()
 
-        self.motor = wpilib.PWMSparkMax(ElevatorConstants.LEFT_MOTOR_CHANNEL)
+        self.motor = wpilib.PWMSparkMax(ElevatorConstants.MOTOR_CHANNEL)
 
     def up(self) -> None:
         self.motor.set(ElevatorConstants.MOTOR_SPEED)

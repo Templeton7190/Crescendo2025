@@ -1,13 +1,14 @@
 import commands2 as c2
-import wpilib
-from constants import GrabberConstants
+import rev
+from constants import BRUSHED, GrabberConstants
 
 
 class Grabber(c2.Subsystem):
     def __init__(self) -> None:
         super().__init__()
 
-        self.motor = wpilib.PWMSparkMax(GrabberConstants.MOTOR_CHANNEL)
+        self.motor = rev.SparkMax(GrabberConstants.MOTOR_CHANNEL, BRUSHED)
+        self.motor.setInverted(True)
 
     def up(self) -> None:
         self.motor.set(GrabberConstants.MOTOR_SPEED)
